@@ -10,14 +10,14 @@ nav {
 
 ul {
     display: flex;
-    color: indigo;
+    color: white;
     text-decoration: none;
     list-style: none;
 }
 
-/*body {
+body {
     background-color: black;
-}*/
+}
 
 .VPlogo {
     width: auto;
@@ -34,4 +34,115 @@ li {
     text-decoration: none;
     font-size: 24px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flexContainer {
+    display: grid;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin: 0px 5%;
+    min-height: 300px;
+    height: 40vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    grid-template-areas: 
+    "research design webDevelopment"
+    ;
+}
+
+.research {
+    grid-area: research;
+    width: 40%;
+    height: auto;
+    text-align: center;
+}
+
+.design {
+    grid-area: design;
+    width: 40%;
+    height: auto;
+    text-align: center;
+}
+
+.webDevelopment {
+    grid-area: webDevelopment;
+    width: 40%;
+    height: auto;
+    text-align: center;
+}
+
+.workContainer {
+    color: white;
+    margin: 0px 5%;
+    width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: start;
+    grid-template-areas: 
+    "letsRole" 
+    "doeWebsite" 
+    "hartWebsite"
+    ;
+}
+
+.letsRole {
+    grid-area: letsRole;
+    display: flex;
+    width: 65%;
+}
+
+.doeWebsite {
+    grid-area: doeWebsite;
+    display: flex;
+    width: 65%;
+}
+
+.hartWebsite {
+    grid-area: hartWebsite;
+    display: flex;
+    width: 65%;
+    vertical-align: auto;
+}
+
+.uxresearch {
+    border-radius: 50%;
+}
+.uxdesign {
+    border-radius: 50%;
+}
+.webdev {
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 600) {
+    .flexContainer {
+        margin: 0px 5%;
+        display: grid;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "research"
+        "design"
+        "webdevelopment";
+    }
+    .research {
+        width: 100%;
+        grid-area: research;
+    }
+    .design {
+        grid-area: design;
+        width: 100%;
+    }
+    .webDevelopment {
+        grid-area: webDevelopment;
+        width: 100%;
+    }
 }
