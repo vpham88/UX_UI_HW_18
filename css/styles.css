@@ -41,17 +41,24 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
 .flexContainer {
     display: grid;
     padding-top: 30px;
     padding-bottom: 20px;
-    margin: 0px 5%;
     min-height: 300px;
     height: 40vh;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-evenly;
+    justify-content: center;
     grid-template-areas: 
     "research design webDevelopment"
     ;
@@ -80,14 +87,11 @@ h1 {
 
 .workContainer {
     color: white;
-    margin: 0px 5%;
-    width: 90%;
+    gap: 50px;
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
     justify-content: center;
-    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    align-items: start;
     grid-template-areas: 
     "letsRole doeWebsite"
     "hartWebsite placeHolder"
@@ -108,17 +112,27 @@ h1 {
 
 .placeHolder {
     grid-area: placeHolder;
+}
 
+.workImage {
+    width: 100%;
+    height: auto;
 }
 
 .uxresearch {
     border-radius: 50%;
+    width: 300px;
+    height: 150px;
 }
 .uxdesign {
     border-radius: 50%;
+    width: 300px;
+    height: 150px;
 }
 .webdev {
     border-radius: 50%;
+    width: 300px;
+    height: 150px;
 }
 
 @media only screen and (max-width: 600) {
